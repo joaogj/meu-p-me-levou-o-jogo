@@ -2,7 +2,7 @@
 
 ## Why
 
-Antes de produzir conteúdo e arte, precisamos provar as três decisões mais arriscadas do GDD: a câmera atrás do ombro em vielas apertadas, a queda de luz que troca o cenário para o Outro Lado e o chat livre com a Mari pelo Claude. Se alguma delas não funcionar, o resto do plano muda. O protótipo cobre só uma área pequena de Duque de Caxias.
+Antes de produzir conteúdo e arte, precisamos provar as três decisões mais arriscadas do GDD: a câmera atrás do ombro em vielas apertadas, a queda de luz que troca o cenário para o Outro Lado e a conversa com a Mari pelo celular. Se alguma delas não funcionar, o resto do plano muda. O protótipo cobre só uma área pequena de Duque de Caxias.
 
 ## What Changes
 
@@ -10,8 +10,8 @@ Antes de produzir conteúdo e arte, precisamos provar as três decisões mais ar
 - Jaime jogável em uma viela de Caxias feita com blocos cinza, com andar, correr com fôlego e câmera atrás do ombro com troca de ombro.
 - Celular com bateria, lanterna e menu aberto pela tecla Tab.
 - Um gatilho de queda de luz que troca o cenário para o Outro Lado.
-- Chat com a Mari por um servidor local que chama o Claude, com falas de reserva quando a API não responde.
-- Fora do escopo do M0: criaturas, saúde, saves, esquiva, agachar, ataque, controle de videogame, remapeamento de teclas, ângulos fixos de câmera, NPCs com IA, finais, as outras quatro fases, arte final e publicação do servidor na internet.
+- Chat com a Mari no celular com falas estáticas: o jogador escolhe entre mensagens prontas e a Mari responde com falas escritas. A conversa com o Claude fica para depois.
+- Fora do escopo do M0: criaturas, saúde, saves, esquiva, agachar, ataque, controle de videogame, remapeamento de teclas, ângulos fixos de câmera, chat livre com o Claude e servidor intermediário, NPCs com IA, finais, as outras quatro fases e arte final.
 
 ## Capabilities
 
@@ -25,13 +25,11 @@ Nenhuma. Por isso a mudança declara `skip_specs: true`. Os requisitos implement
 
 - `camera`: câmera atrás do ombro, colisão com paredes e balanço opcional.
 - `controles`: movimento com teclado, câmera com mouse, trocar de ombro, celular e lanterna, pausa.
-- `celular`: bateria como recurso, chat livre com a Mari e falas de reserva sem conexão.
+- `celular`: bateria como recurso e as falas pré-escritas da Mari (as mesmas que servem de reserva sem conexão). O chat livre com o Claude não entra no M0.
 - `fases`: Outro Lado com queda de luz.
-- `npcs-ia`: servidor intermediário, limite de custo e falas de reserva (aplicados ao chat da Mari).
 
 ## Impact
 
 - **Projeto Unity:** `Packages/manifest.json` ganha os pacotes e módulos listados no design. Código novo em `Assets/Scripts/`, cena nova em `Assets/Scenes/M0_Caxias.unity`, testes em `Assets/Tests/`.
-- **Servidor:** pasta nova `server/` na raiz do repositório, fora de `Assets/`, com um serviço Node.js que guarda a chave da API.
-- **Dependência externa:** é preciso uma chave da API da Anthropic para testar o chat de verdade. Sem ela, o chat funciona só com as falas de reserva.
-- **Custos:** cada mensagem do chat consome a API, com limite por sessão.
+- **Sem dependências externas:** o M0 não usa a API do Claude, então não precisa de chave nem de servidor.
+- **Conteúdo:** as falas da Mari ficam em um asset de dados no projeto, prontas para virar as falas de reserva quando o chat com o Claude entrar.
