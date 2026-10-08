@@ -9,6 +9,7 @@ Terror sério, com humor que nasce das situações. A piada nunca é o morador: 
 ## Stack
 - Unity 6 com URP, 3D linear em terceira pessoa (câmera atrás do ombro com Cinemachine), visual low-poly com filtro de PS2
 - GDD completo em `docs/GDD.md`
+- Primeira proposta: `openspec/changes/prototipo-m0-caxias/` (protótipo de Caxias com câmera, celular, queda de luz e chat com a Mari)
 - Controles: padrão de PC para terceira pessoa atrás do ombro (WASD, mouse, E para interagir), com equivalência para controle de videogame
 - C# nos scripts do jogo
 - Claude API para o chat da Mari e as conversas com NPCs, sempre por um servidor intermediário (a chave nunca vai no cliente)
