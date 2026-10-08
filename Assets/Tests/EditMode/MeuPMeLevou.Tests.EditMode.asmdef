@@ -3,7 +3,8 @@
     "rootNamespace": "MeuPMeLevou.Tests",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "MeuPMeLevou.Jaime"
     ],
     "includePlatforms": [
         "Editor"
