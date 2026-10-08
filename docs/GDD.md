@@ -92,7 +92,24 @@ Lanchonetes 24h e bares com a TV ligada. Interagir com a TV salva o jogo e recar
 
 **Câmera atrás do ombro** com Cinemachine, com colisão para não atravessar paredes em vielas. **Ângulos fixos** só em momentos pontuais: chegada em Caxias, quadra de Nilópolis e cena final em Japeri. Balanço de câmera leve com opção para desligar. ✅
 
-**Controles (🟡):** teclado e mouse ou controle. Andar, correr, esquivar, golpe, interagir, esconder-se, abrir o celular, lanterna.
+**Controles de PC (🟡, padrão do gênero em terceira pessoa atrás do ombro):**
+
+| Ação | Teclado e mouse | Controle |
+|---|---|---|
+| Andar | W A S D | Analógico esquerdo |
+| Correr (gasta fôlego) | Shift | Pressionar analógico esquerdo |
+| Esquivar | Espaço | Botão A (sul) |
+| Agachar | Ctrl | Pressionar analógico direito |
+| Câmera | Mouse | Analógico direito |
+| Trocar de ombro | Q | Botão LB |
+| Mirar arma | Botão direito | Gatilho esquerdo |
+| Atacar | Botão esquerdo | Gatilho direito |
+| Interagir | E | Botão A (sul) |
+| Celular | Tab | Botão Y (norte) |
+| Lanterna | F | Botão X (oeste) |
+| Pausa e menu | Esc | Start |
+
+Opções: sensibilidade, inversão do eixo vertical, troca de ombro padrão, remapeamento de qualquer ação e vibração do controle. Usamos o padrão de terceira pessoa para que quem já jogou jogos do gênero se sinta em casa.
 
 ## 9. O celular ✅
 
