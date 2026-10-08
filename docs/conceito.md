@@ -6,6 +6,7 @@
 
 - **Tom:** terror sério, com humor que nasce das situações (decidido por João em 8 out.).
 - **Reviravolta:** o Jaime deu ghosting na Mari por preconceito. Fica valendo até segunda ordem.
+- **Formato:** 3D linear, câmera atrás do ombro (Cinemachine), gameplay de exploração, puzzles e fuga. Detalhes no `GDD.md`.
 - **Claude:** participa de todas as partes, tanto no desenvolvimento quanto dentro do jogo (detalhes na seção "Claude no jogo e no desenvolvimento").
 
 ## Premissa em uma frase

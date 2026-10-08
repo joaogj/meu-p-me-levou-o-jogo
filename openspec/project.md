@@ -7,7 +7,8 @@ Paródia de terror psicológico de Silent Hill 2. Jaime Sunderlândio, do Leblon
 Terror sério, com humor que nasce das situações. A piada nunca é o morador: quem é ridicularizado é o preconceito e a covardia do Jaime.
 
 ## Stack
-- Unity 6 com URP, 3D em terceira pessoa, visual low-poly com filtro de PS2
+- Unity 6 com URP, 3D linear em terceira pessoa (câmera atrás do ombro com Cinemachine), visual low-poly com filtro de PS2
+- GDD completo em `docs/GDD.md`
 - C# nos scripts do jogo
 - Claude API para o chat da Mari e as conversas com NPCs, sempre por um servidor intermediário (a chave nunca vai no cliente)
 
