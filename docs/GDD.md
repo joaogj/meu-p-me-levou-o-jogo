@@ -12,7 +12,8 @@
 
 **Gênero:** terror psicológico, exploração e puzzles, com humor situacional. ✅
 **Câmera:** 3D, terceira pessoa atrás do ombro. ✅
-**Plataforma:** PC (Windows) em primeiro lugar, via Unity 6 com URP. 🟡
+**Arte:** assets da Unity Asset Store, com a licença de cada pacote conferida para uso comercial. ✅
+**Plataforma:** PC (Windows) com lançamento na Steam, via Unity 6 com URP. Demo gratuita em WebGL no itch.io para divulgação. Port Android depois, se a versão de PC funcionar. ✅
 **Idioma:** português do Brasil, com textos preparados para localização futura. 🟡
 **Duração estimada:** 4 a 6 horas na primeira vez, cinco fases. 🟡
 **Classificação indicativa:** 14 anos (terror, linguagem). 🟡
@@ -138,7 +139,11 @@ O final depende do julgamento escondido (seção 10) e de escolhas na fase final
 | **Ficou** | Conversas gentis e visitou todos os bares | Aluga uma kitnet em Nilópolis e vira passista. Final "bom" e cômico. |
 | **Caramelo** | Secreto | Revela que tudo foi controlado por um vira-lata caramelo num painel de controle. 🟡 condição a definir |
 
-## 13. Direção de arte 🟡
+## 13. Direção de arte
+
+Arte com assets da Unity Asset Store (✅ decidido pelo João). Antes do lançamento, cada pacote tem a licença conferida para uso comercial.
+
+🟡
 
 - Low-poly com filtro de PS2: resolução baixa, dithering, névoa de distância, texturas sujas.
 - **Mundo normal:** madrugada quente, postes amarelos, ruas reais e reconhecíveis, sempre tratadas com respeito.
@@ -186,8 +191,6 @@ HUD mínimo: saúde discreta e o celular como menu principal. Menus em estética
 
 ## 19. Perguntas em aberto ❓
 
-1. Plataforma: só PC ou também web/mobile?
-2. Dublagem: textos legendados ou voz para Jaime e Mari?
-3. Condição do final secreto "Caramelo".
-4. Arte: o João tem referências visuais? Usaremos assets prontos (loja do Unity) ou arte própria?
-5. Haverá modo de dificuldade?
+1. Dublagem: textos legendados ou voz para Jaime e Mari?
+2. Condição do final secreto "Caramelo".
+3. Haverá modo de dificuldade?
