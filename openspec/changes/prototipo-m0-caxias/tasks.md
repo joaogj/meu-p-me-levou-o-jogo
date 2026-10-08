@@ -2,8 +2,8 @@
 
 ## 1. Base do projeto Unity
 
-- [ ] 1.1 Instalar pelo Package Manager os pacotes e módulos do design (decisão 1) e verificar que o Editor abre sem erros no console e que `packages-lock.json` foi atualizado
-- [ ] 1.2 Criar o URP Asset e o Renderer, atribuí-los em Graphics e Quality, e verificar que uma cena vazia renderiza sem materiais rosa
+- [x] 1.1 Instalar pelo Package Manager os pacotes e módulos do design (decisão 1) e verificar que o Editor abre sem erros no console e que `packages-lock.json` foi atualizado
+- [x] 1.2 Criar o URP Asset e o Renderer, atribuí-los em Graphics e Quality, e verificar que uma cena vazia renderiza sem materiais rosa
 - [ ] 1.3 Criar as pastas `Assets/Scripts`, `Assets/Scenes`, `Assets/Tests/EditMode` e `Assets/Tests/PlayMode` com seus assembly definitions, e verificar que o Test Runner lista as duas suítes vazias
 
 ## 2. Jaime, controles e câmera
