@@ -589,7 +589,8 @@ PlayerSettings:
   webWasm2023: 1
   webEnableSubmoduleStrippingCompatibility: 0
   webProgressiveAssetLoading: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: SENTIS_ANALYTICS_ENABLED
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -666,7 +667,13 @@ PlayerSettings:
   XboxOneXTitleMemory: 8
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -689,11 +696,11 @@ PlayerSettings:
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: 
+  cloudProjectId: f56876de-01e1-4118-b99b-1841ce96eba6
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: meu-p-me-levou-o-jogo
+  organizationId: jg001
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
