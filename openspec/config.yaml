@@ -1,28 +1,67 @@
 schema: spec-driven
 
 context: |
-  Language: Portuguese
-  All artifacts must be written in Portuguese.
-  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Idioma: todos os artefatos em português. Os cabeçalhos estruturais do OpenSpec
+  e as palavras-chave SHALL, MUST, WHEN, THEN e Scenario ficam em inglês.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always state what is out of scope
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+  Projeto: jogo 3D linear de terror em terceira pessoa (paródia de Silent Hill 2
+  na Baixada Fluminense). O humor nunca zomba dos moradores; a piada é o
+  preconceito do protagonista.
 
-# Per-operation guidance (optional)
-# Add advisory guidance for how apply and archive work should be conducted.
-# This is separate from artifact rules above.
-# Example:
-#   operations:
-#     apply:
-#       guidance:
-#         - Keep test summaries concise
-#     archive:
-#       guidance:
-#         - Summarize the archive outcome before finishing
+  Stack:
+  - Unity 6000.6.4f1, Universal Render Pipeline (URP), C# (.NET Standard 2.1 / API do Unity)
+  - Cinemachine 3 para a câmera atrás do ombro
+  - Input System (pacote novo) com Input Actions asset; o Input Manager antigo não é usado
+  - UI Toolkit (UXML/USS) para interfaces novas
+  - Unity Test Framework (NUnit) com suítes EditMode e PlayMode
+  - Plataformas: PC (Steam) primeiro, demo WebGL no itch.io, Android depois
+  - Arte: assets da Unity Asset Store
+
+  Estrutura do repositório:
+  - Assets/Scripts/<Sistema>/ com um assembly definition (.asmdef) por sistema
+  - Assets/Scenes/, Assets/Data/ (ScriptableObjects), Assets/UI/ (UXML/USS)
+  - Assets/Tests/EditMode/ e Assets/Tests/PlayMode/, cada uma com seu .asmdef
+  - Packages/manifest.json e packages-lock.json versionados
+  - docs/GDD.md é a referência de design; openspec/specs/ guarda os requisitos
+
+  Convenções de C#:
+  - Namespace raiz MeuPMeLevou, com subnamespace por sistema (ex.: MeuPMeLevou.Celular)
+  - Nomes de tipos e membros em PascalCase; campos privados em _camelCase;
+    nomes do domínio do jogo em português (Bateria, ConversaMari), APIs do Unity em inglês
+  - Campos expostos no Inspector com [SerializeField] private, nunca public
+  - Regras de jogo em classes C# puras, sem depender de MonoBehaviour, para teste EditMode;
+    o MonoBehaviour só liga a regra à cena
+  - Dados de conteúdo (falas, configurações) em ScriptableObjects, não fixos no código
+  - Sem Find/GetComponent em Update; referências resolvidas no Awake ou pelo Inspector
+
+  Limites do ambiente: o Editor do Unity só roda no Mac do João. Tarefas que dependem
+  do Editor precisam de um passo de verificação que ele ou uma sessão no Mac consiga executar.
+
+rules:
+  proposal:
+    - Dizer quais specs existentes em openspec/specs/ a mudança implementa ou altera
+    - Listar explicitamente o que fica fora do escopo
+    - Citar pacotes do Unity ou assets da Asset Store que a mudança adiciona
+  specs:
+    - Descrever comportamento visível ao jogador, não detalhes de implementação em C#
+    - Cada requisito tem ao menos um Scenario jogável ou testável
+  design:
+    - Para cada decisão, registrar a alternativa descartada e o motivo
+    - Indicar quais classes ficam testáveis em EditMode e o que exige PlayMode
+    - Mencionar o impacto em desempenho quando a decisão afetar WebGL ou Android
+  tasks:
+    - Cada tarefa termina com como verificá-la (teste EditMode, teste PlayMode ou passo manual no Editor)
+    - Testes ficam no mesmo grupo da funcionalidade, não acumulados no fim
+    - Tarefas que mexem em pacotes mencionam a atualização de Packages/manifest.json e packages-lock.json
+
+operations:
+  apply:
+    guidance:
+      - Seguir as convenções de C# do contexto
+      - Versionar os arquivos .meta junto com os assets e nunca editar GUIDs à mão
+      - Não editar cenas e prefabs como texto quando o Editor puder fazer a mudança
+      - Rodar os testes EditMode e PlayMode antes de marcar uma tarefa como feita
+      - Quando o Editor não estiver disponível, deixar a tarefa aberta e dizer qual verificação falta
+  archive:
+    guidance:
+      - Confirmar que todas as tarefas têm verificação registrada antes de arquivar

@@ -1,19 +1,35 @@
+# Proposal
+
 ## Why
 
-Antes de escrever conteúdo ou arte, precisamos provar as três decisões mais arriscadas do jogo: a câmera atrás do ombro em vielas apertadas, a queda de luz que transforma o cenário e o chat livre com a Mari controlado pelo Claude. Se alguma delas não funcionar, o resto do GDD muda. O protótipo cobre só Duque de Caxias, para não gastar tempo com as outras fases.
+Antes de produzir conteúdo e arte, precisamos provar as três decisões mais arriscadas do GDD: a câmera atrás do ombro em vielas apertadas, a queda de luz que troca o cenário para o Outro Lado e a conversa com a Mari pelo celular. Se alguma delas não funcionar, o resto do plano muda. O protótipo cobre só uma área pequena de Duque de Caxias.
 
 ## What Changes
 
-- Criar o projeto Unity 6 com URP, em 3D linear.
-- Jaime jogável em uma área pequena de Caxias, com câmera atrás do ombro (Cinemachine) e colisão com paredes.
-- Controles de teclado e mouse conforme a spec `controles` (WASD, Shift, Espaço, mouse, E, Tab, F, Esc).
+- Configurar o projeto Unity (6000.6.4f1) para o jogo: URP, Cinemachine, Input System, módulos de física, áudio, UI e rede, e o Test Framework.
+- Jaime jogável em uma viela de Caxias feita com blocos cinza, com andar, correr com fôlego e câmera atrás do ombro com troca de ombro.
+- Celular com bateria, lanterna e menu aberto pela tecla Tab.
 - Um gatilho de queda de luz que troca o cenário para o Outro Lado.
-- Celular com bateria, lanterna que gasta bateria e o chat com a Mari.
-- Chat com a Mari por um servidor intermediário que chama o Claude, com falas de reserva pré-escritas quando a API não responde.
-- Fora do escopo: criaturas, Homem do Gás, finais, as outras quatro fases, dublagem, arte final e menus completos.
+- Chat com a Mari no celular com falas estáticas: o jogador escolhe entre mensagens prontas e a Mari responde com falas escritas. A conversa com o Claude fica para depois.
+- Fora do escopo do M0: criaturas, saúde, saves, esquiva, agachar, ataque, controle de videogame, remapeamento de teclas, ângulos fixos de câmera, chat livre com o Claude e servidor intermediário, NPCs com IA, finais, as outras quatro fases e arte final.
+
+## Capabilities
+
+### New Capabilities
+
+Nenhuma. O protótipo implementa requisitos que já existem nas specs, sem mudar o comportamento descrito nelas.
+
+### Modified Capabilities
+
+Nenhuma. Por isso a mudança declara `skip_specs: true`. Os requisitos implementados são:
+
+- `camera`: câmera atrás do ombro, colisão com paredes e balanço opcional.
+- `controles`: movimento com teclado, câmera com mouse, trocar de ombro, celular e lanterna, pausa.
+- `celular`: bateria como recurso e as falas pré-escritas da Mari (as mesmas que servem de reserva sem conexão). O chat livre com o Claude não entra no M0.
+- `fases`: Outro Lado com queda de luz.
 
 ## Impact
 
-- Capacidades novas: `prototipo` (esta proposta). As capacidades `camera`, `controles`, `celular` e `npcs-ia` já têm specs; o protótipo as implementa, sem mudar os requisitos.
-- Código: projeto Unity novo em `Assets/`, e um serviço pequeno do chat em `server/`.
-- Custos: a API do Claude entra já no protótipo, com limite de mensagens por sessão de teste.
+- **Projeto Unity:** `Packages/manifest.json` ganha os pacotes e módulos listados no design. Código novo em `Assets/Scripts/`, cena nova em `Assets/Scenes/M0_Caxias.unity`, testes em `Assets/Tests/`.
+- **Sem dependências externas:** o M0 não usa a API do Claude, então não precisa de chave nem de servidor.
+- **Conteúdo:** as falas da Mari ficam em um asset de dados no projeto, prontas para virar as falas de reserva quando o chat com o Claude entrar.
