@@ -2,7 +2,8 @@
     "name": "MeuPMeLevou.Jaime",
     "rootNamespace": "MeuPMeLevou.Jaime",
     "references": [
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Unity.Cinemachine"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
