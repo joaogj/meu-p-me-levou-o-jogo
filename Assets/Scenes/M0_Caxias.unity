@@ -406,11 +406,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b45da4c5911b4d02aa96631d6073ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MeuPMeLevou.Jaime::MeuPMeLevou.Jaime.MovimentoJaime
-  _acoes: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
+  _actions: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
   _camera: {fileID: 709841302}
-  _velocidadeAndando: 2.5
-  _velocidadeCorrendo: 5
-  _gravidade: -20
+  _walkSpeed: 2.5
+  _sprintSpeed: 5
+  _gravity: -20
 --- !u!143 &688585107
 CharacterController:
   m_ObjectHideFlags: 0
@@ -465,9 +465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2befd372e4c41fba7b16f86edcf8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MeuPMeLevou.Jaime::MeuPMeLevou.Jaime.TrocaDeOmbro
-  _acoes: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
-  _terceiraPessoa: {fileID: 1156560113}
-  _velocidadeDaTroca: 4
+  _actions: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
+  _thirdPersonFollow: {fileID: 1156560113}
+  _switchSpeed: 4
 --- !u!114 &688585110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6787f119a3e40809b9777ea2717617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: MeuPMeLevou.Jaime::MeuPMeLevou.Jaime.ControleCameraJaime
-  _acoes: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
-  _alvoCamera: {fileID: 104578046}
-  _sensibilidade: 0.1
+  _actions: {fileID: -944628639613478452, guid: 002e90babdb3e47a7bb28a88fa7d5700, type: 3}
+  _cameraTarget: {fileID: 104578046}
+  _sensitivity: 0.1
 --- !u!1 &709841300
 GameObject:
   m_ObjectHideFlags: 0
