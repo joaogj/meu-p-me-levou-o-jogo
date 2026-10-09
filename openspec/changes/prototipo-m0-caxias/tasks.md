@@ -8,7 +8,7 @@
 
 ## 2. Jaime, controles e câmera
 
-- [ ] 2.1 Criar `Jaime.inputactions` com o mapa "Exploracao" (decisão 3) e verificar no Input Debugger que WASD, Shift, mouse, Q, Tab, F e Esc disparam as ações
+- [ ] 2.1 Criar `Jaime.inputactions` com o mapa "Exploration" (decisão 3) e verificar no Input Debugger que WASD, Shift, mouse, Q, Tab, F e Esc disparam as ações
 - [ ] 2.2 Implementar o movimento do Jaime com `CharacterController` e fôlego para correr, com teste EditMode da regra de fôlego (gasta correndo, recupera andando, não corre com fôlego zerado)
 - [ ] 2.3 Montar a cena `M0_Caxias` com uma viela de blocos cinza que inclua um trecho com largura de três vezes o ombro do Jaime, e verificar que dá para andar de ponta a ponta
 - [ ] 2.4 Configurar a Cinemachine Camera com Third Person Follow e troca de ombro pela tecla Q, com teste PlayMode que percorre o trecho estreito e falha se a câmera entrar em uma parede
@@ -28,7 +28,7 @@
 
 ## 5. Chat com a Mari
 
-- [ ] 5.1 Criar o ScriptableObject `ConversaMari` e a interface `IFonteDeFalas` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
+- [ ] 5.1 Criar o ScriptableObject `MariConversation` e a interface `IDialogueSource` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
 - [ ] 5.2 Escrever a conversa do capítulo 1 com pelo menos cinco trocas, sem revelar o ghosting, e revisar o texto com o João
 - [ ] 5.3 Mostrar no celular as escolhas do jogador, o "Mari está digitando…" e as respostas, e verificar manualmente que cada mensagem enviada gasta bateria e que com 0% não dá para enviar
 
