@@ -4,7 +4,10 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "MeuPMeLevou.Jaime"
+        "MeuPMeLevou.Jaime",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "MeuPMeLevou.Phone"
     ],
     "includePlatforms": [
         "Editor"

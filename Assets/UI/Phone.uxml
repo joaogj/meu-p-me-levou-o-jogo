@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="Phone.uss" />
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+        <ui:VisualElement name="hud" class="hud" picking-mode="Ignore">
+            <ui:Label name="battery-hud" class="hud__battery" text="Bateria 100%" />
+            <ui:Label name="battery-warning" class="hud__warning hud__warning--hidden" text="Sem bateria. Só recarrega ao salvar." />
+        </ui:VisualElement>
+        <ui:VisualElement name="phone" class="phone phone--hidden">
+            <ui:VisualElement name="status-bar" class="phone__status-bar">
+                <ui:Label name="contact" class="phone__contact" text="Mari" />
+                <ui:Label name="battery-phone" class="phone__battery" text="100%" />
+            </ui:VisualElement>
+            <ui:ScrollView name="chat-log" class="phone__chat" />
+            <ui:VisualElement name="choices" class="phone__choices" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

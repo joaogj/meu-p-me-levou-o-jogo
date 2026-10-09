@@ -1,0 +1,83 @@
+.root {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* HUD: battery in the corner and the low-battery warning */
+.hud {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.hud__battery {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: rgb(220, 220, 220);
+    font-size: 22px;
+    -unity-font-style: bold;
+}
+
+.hud__warning {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    -unity-text-align: middle-center;
+    color: rgb(230, 90, 80);
+    font-size: 28px;
+    -unity-font-style: bold;
+}
+
+.hud__warning--hidden {
+    display: none;
+}
+
+/* Phone screen */
+.phone {
+    position: absolute;
+    right: 48px;
+    bottom: 48px;
+    width: 420px;
+    height: 640px;
+    padding: 16px;
+    background-color: rgb(18, 20, 24);
+    border-color: rgb(70, 74, 82);
+    border-width: 3px;
+    border-radius: 28px;
+}
+
+.phone--hidden {
+    display: none;
+}
+
+.phone__status-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.phone__contact {
+    color: rgb(240, 240, 240);
+    font-size: 26px;
+    -unity-font-style: bold;
+}
+
+.phone__battery {
+    color: rgb(190, 190, 190);
+    font-size: 20px;
+}
+
+.phone__chat {
+    flex-grow: 1;
+}
+
+.phone__choices {
+    margin-top: 12px;
+}

@@ -4,21 +4,21 @@
 
 - [x] 1.1 Instalar pelo Package Manager os pacotes e módulos do design (decisão 1) e verificar que o Editor abre sem erros no console e que `packages-lock.json` foi atualizado
 - [x] 1.2 Criar o URP Asset e o Renderer, atribuí-los em Graphics e Quality, e verificar que uma cena vazia renderiza sem materiais rosa
-- [ ] 1.3 Criar as pastas `Assets/Scripts`, `Assets/Scenes`, `Assets/Tests/EditMode` e `Assets/Tests/PlayMode` com seus assembly definitions, e verificar que o Test Runner lista as duas suítes vazias
+- [x] 1.3 Criar as pastas `Assets/Scripts`, `Assets/Scenes`, `Assets/Tests/EditMode` e `Assets/Tests/PlayMode` com seus assembly definitions, e verificar que o Test Runner lista as duas suítes vazias
 
 ## 2. Jaime, controles e câmera
 
-- [ ] 2.1 Criar `Jaime.inputactions` com o mapa "Exploration" (decisão 3) e verificar no Input Debugger que WASD, Shift, mouse, Q, Tab, F e Esc disparam as ações
+- [x] 2.1 Criar `Jaime.inputactions` com o mapa "Exploration" (decisão 3) e verificar no Input Debugger que WASD, Shift, mouse, Q, Tab, F e Esc disparam as ações
 - [x] 2.2 Implementar o movimento do Jaime com `CharacterController` e fôlego para correr, com teste EditMode da regra de fôlego (gasta correndo, recupera andando, não corre com fôlego zerado)
 - [x] 2.3 Montar a cena `M0_Caxias` com uma viela de blocos cinza que inclua um trecho com largura de três vezes o ombro do Jaime, e verificar que dá para andar de ponta a ponta
-- [ ] 2.4 Configurar a Cinemachine Camera com Third Person Follow e troca de ombro pela tecla Q, com teste PlayMode que percorre o trecho estreito e falha se a câmera entrar em uma parede
-- [ ] 2.5 Adicionar o balanço de câmera opcional com uma configuração para desligar, e verificar manualmente que, desligado, a câmera fica estável
+- [x] 2.4 Configurar a Cinemachine Camera com Third Person Follow e troca de ombro pela tecla Q, com teste PlayMode que percorre o trecho estreito e falha se a câmera entrar em uma parede
+- [x] 2.5 Adicionar o balanço de câmera opcional com uma configuração para desligar, e verificar manualmente que, desligado, a câmera fica estável
 
 ## 3. Celular
 
-- [ ] 3.1 Implementar a bateria como classe C# sem dependência de cena, com teste EditMode para consumo da lanterna, consumo por mensagem e bloqueio em 0%
-- [ ] 3.2 Criar a tela do celular em UI Toolkit, aberta e fechada com Tab, e verificar que Esc também fecha
-- [ ] 3.3 Ligar a lanterna à tecla F e à bateria, e verificar que com 0% a lanterna não acende e aparece o aviso de bateria
+- [x] 3.1 Implementar a bateria como classe C# sem dependência de cena, com teste EditMode para consumo da lanterna, consumo por mensagem e bloqueio em 0%
+- [x] 3.2 Criar a tela do celular em UI Toolkit, aberta e fechada com Tab, e verificar que Esc também fecha
+- [x] 3.3 Ligar a lanterna à tecla F e à bateria, e verificar que com 0% a lanterna não acende e aparece o aviso de bateria
 
 ## 4. Queda de luz
 
@@ -28,7 +28,7 @@
 
 ## 5. Chat com a Mari
 
-- [ ] 5.1 Criar o ScriptableObject `MariConversation` e a interface `IDialogueSource` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
+- [x] 5.1 Criar o ScriptableObject `MariConversation` e a interface `IDialogueSource` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
 - [ ] 5.2 Escrever a conversa do capítulo 1 com pelo menos cinco trocas, sem revelar o ghosting, e revisar o texto com o João
 - [ ] 5.3 Mostrar no celular as escolhas do jogador, o "Mari está digitando…" e as respostas, e verificar manualmente que cada mensagem enviada gasta bateria e que com 0% não dá para enviar
 

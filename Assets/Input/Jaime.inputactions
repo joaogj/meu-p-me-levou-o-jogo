@@ -3,11 +3,11 @@
     "name": "Jaime",
     "maps": [
         {
-            "name": "Exploracao",
+            "name": "Exploration",
             "id": "ab4e6dd6-6129-4a12-99fd-404f606fb2ee",
             "actions": [
                 {
-                    "name": "Mover",
+                    "name": "Move",
                     "type": "Value",
                     "id": "772d8b41-e923-41d0-b6e9-3fef35a91d1f",
                     "expectedControlType": "",
@@ -17,7 +17,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Olhar",
+                    "name": "Look",
                     "type": "Value",
                     "id": "946856b2-4198-4254-b0c3-7709c2929db7",
                     "expectedControlType": "",
@@ -27,7 +27,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Correr",
+                    "name": "Sprint",
                     "type": "Button",
                     "id": "902b4569-78e0-49c2-b102-15c0c76a5f84",
                     "expectedControlType": "",
@@ -37,7 +37,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "TrocarOmbro",
+                    "name": "SwitchShoulder",
                     "type": "Button",
                     "id": "09fcb50f-2ca7-4639-9984-283f4442ef80",
                     "expectedControlType": "",
@@ -47,7 +47,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Celular",
+                    "name": "Phone",
                     "type": "Button",
                     "id": "9d0ac65b-27de-4bde-b6a6-108e7c2078a6",
                     "expectedControlType": "",
@@ -57,7 +57,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Lanterna",
+                    "name": "Flashlight",
                     "type": "Button",
                     "id": "06483123-93ab-47bc-beca-a16f1c94d9fd",
                     "expectedControlType": "",
@@ -67,7 +67,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Pausar",
+                    "name": "Pause",
                     "type": "Button",
                     "id": "2a0373c2-909b-474e-82f0-a300cd3e83ff",
                     "expectedControlType": "",
@@ -85,7 +85,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mover",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -96,7 +96,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mover",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -107,7 +107,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mover",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -118,7 +118,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mover",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -129,7 +129,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mover",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -140,7 +140,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Olhar",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -151,7 +151,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Correr",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -162,7 +162,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TrocarOmbro",
+                    "action": "SwitchShoulder",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -173,7 +173,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Celular",
+                    "action": "Phone",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -184,7 +184,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Lanterna",
+                    "action": "Flashlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -195,7 +195,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pausar",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
