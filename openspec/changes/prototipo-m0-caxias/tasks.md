@@ -12,7 +12,7 @@
 - [x] 2.2 Implementar o movimento do Jaime com `CharacterController` e fôlego para correr, com teste EditMode da regra de fôlego (gasta correndo, recupera andando, não corre com fôlego zerado)
 - [x] 2.3 Montar a cena `M0_Caxias` com uma viela de blocos cinza que inclua um trecho com largura de três vezes o ombro do Jaime, e verificar que dá para andar de ponta a ponta
 - [x] 2.4 Configurar a Cinemachine Camera com Third Person Follow e troca de ombro pela tecla Q, com teste PlayMode que percorre o trecho estreito e falha se a câmera entrar em uma parede
-- [ ] 2.5 Adicionar o balanço de câmera opcional com uma configuração para desligar, e verificar manualmente que, desligado, a câmera fica estável
+- [x] 2.5 Adicionar o balanço de câmera opcional com uma configuração para desligar, e verificar manualmente que, desligado, a câmera fica estável
 
 ## 3. Celular
 

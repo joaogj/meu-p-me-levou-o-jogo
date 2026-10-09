@@ -67,6 +67,16 @@ Cinemachine Camera com Third Person Follow: deslocamento de ombro (0,5; 0,2), di
 obstáculos ligada (raio 0,2, ignora a tag `Player`). A colisão com paredes vem do próprio Cinemachine, sem raycast
 próprio.
 
+### `CameraSwayOptions` e `CameraSway` — tarefa 2.5
+
+Balanço leve de câmera, opcional (spec `camera`, "Balanço de câmera opcional").
+
+- `CameraSwayOptions` (classe C# pura): guarda `Enabled` e a amplitude; `Gain` vale a amplitude quando ligado e exatamente 0 quando desligado.
+- `CameraSway` (MonoBehaviour na `CameraJaime`): aplica `Gain` ao `AmplitudeGain` do `CinemachineBasicMultiChannelPerlin`. A propriedade `Enabled` é o ponto de ligação da futura tela de configurações; no M0 o valor inicial vem do Inspector.
+- O perfil de ruído é o asset `Assets/Data/CameraSwayNoise.asset`: rotação lenta e pequena (cerca de 0,35°) e quase nenhum deslocamento.
+
+Não há tela de configurações nem persistência da opção no M0; isso fica para o polimento (M4).
+
 ### Cena `M0_Caxias` — tarefa 2.3
 
 Viela de blocos cinza com um trecho estreito entre z = 10 e z = 20 (livre de cerca de 1,5 m entre as paredes).
@@ -75,10 +85,11 @@ Viela de blocos cinza com um trecho estreito entre z = 10 e z = 20 (livre de cer
 
 | Tarefa | Como foi verificada |
 | --- | --- |
-| 1.3 | Test Runner lista as duas suítes: EditMode (15 testes) e PlayMode (2 testes). |
+| 1.3 | Test Runner lista as duas suítes: EditMode e PlayMode. |
 | 2.1 | `JaimeInputActionsTests` simula teclado e mouse e confere que cada ação dispara do controle da tabela. Substitui a checagem manual no Input Debugger. |
 | 2.2 | `StaminaTests` (5 testes): gasta correndo, recupera andando, não recupera parado, não corre zerado, limites 0 e máximo. |
 | 2.4 | `CameraInAlleyTests` percorre o trecho estreito com o ombro padrão e depois de apertar Q, e falha se o centro da câmera entrar em uma parede. Também confere que o Q muda `CameraSide`. |
+| 2.5 | `CameraSwayOptionsTests` (EditMode, 4 testes) para a regra; `CameraSwayTests` (PlayMode) com o Jaime parado: câmera imóvel com o balanço desligado e em movimento com ele ligado. Substitui a checagem manual. |
 
 ## Notas
 

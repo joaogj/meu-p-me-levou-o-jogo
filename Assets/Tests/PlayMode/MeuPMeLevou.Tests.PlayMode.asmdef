@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Unity.InputSystem",
-        "Unity.Cinemachine"
+        "Unity.Cinemachine",
+        "MeuPMeLevou.Jaime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
