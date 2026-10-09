@@ -28,7 +28,7 @@
 
 ## 5. Chat com a Mari
 
-- [ ] 5.1 Criar o ScriptableObject `MariConversation` e a interface `IDialogueSource` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
+- [x] 5.1 Criar o ScriptableObject `MariConversation` e a interface `IDialogueSource` (decisão 7), com teste EditMode que percorre uma conversa de exemplo do começo ao fim
 - [ ] 5.2 Escrever a conversa do capítulo 1 com pelo menos cinco trocas, sem revelar o ghosting, e revisar o texto com o João
 - [ ] 5.3 Mostrar no celular as escolhas do jogador, o "Mari está digitando…" e as respostas, e verificar manualmente que cada mensagem enviada gasta bateria e que com 0% não dá para enviar
 
