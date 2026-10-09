@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Jogo 3D linear de terror em terceira pessoa (paródia de Silent Hill 2 na Baixada Fluminense), Unity 6000.6.4f1 com URP. Escreva em português, exceto APIs do Unity e as palavras-chave do OpenSpec (SHALL, MUST, WHEN, THEN, Scenario).
+Jogo 3D linear de terror em terceira pessoa (paródia de Silent Hill 2 na Baixada Fluminense), Unity 6000.6.4f1 com URP. Código (identificadores e comentários) em inglês. Falas, textos de UI, GDD, specs e documentação em português, com as palavras-chave do OpenSpec (SHALL, MUST, WHEN, THEN, Scenario) em inglês.
 
 ## Regra do humor (vale para código, falas, specs e arte)
 
@@ -28,6 +28,6 @@ O medo e a piada são do Jaime, não da Baixada. Moradores são as pessoas mais 
 
 ## Decisões já tomadas
 
-- Sem servidor de chat nem Claude API no M0. O chat da Mari usa falas estáticas escritas à mão, em ScriptableObject atrás da interface `IFonteDeFalas`. A Claude API entra depois, sempre por servidor intermediário; a chave nunca vai no cliente.
+- Sem servidor de chat nem Claude API no M0. O chat da Mari usa falas estáticas escritas à mão, em ScriptableObject atrás da interface `IDialogueSource`. A Claude API entra depois, sempre por servidor intermediário; a chave nunca vai no cliente.
 - Câmera atrás do ombro com Cinemachine 3, Input System novo (sem o Input Manager antigo), UI Toolkit para interfaces novas.
 - Arte só de assets da Asset Store, com a licença conferida para uso comercial.
