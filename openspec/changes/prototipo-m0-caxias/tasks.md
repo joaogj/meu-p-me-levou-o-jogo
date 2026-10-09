@@ -16,9 +16,9 @@
 
 ## 3. Celular
 
-- [ ] 3.1 Implementar a bateria como classe C# sem dependência de cena, com teste EditMode para consumo da lanterna, consumo por mensagem e bloqueio em 0%
-- [ ] 3.2 Criar a tela do celular em UI Toolkit, aberta e fechada com Tab, e verificar que Esc também fecha
-- [ ] 3.3 Ligar a lanterna à tecla F e à bateria, e verificar que com 0% a lanterna não acende e aparece o aviso de bateria
+- [x] 3.1 Implementar a bateria como classe C# sem dependência de cena, com teste EditMode para consumo da lanterna, consumo por mensagem e bloqueio em 0%
+- [x] 3.2 Criar a tela do celular em UI Toolkit, aberta e fechada com Tab, e verificar que Esc também fecha
+- [x] 3.3 Ligar a lanterna à tecla F e à bateria, e verificar que com 0% a lanterna não acende e aparece o aviso de bateria
 
 ## 4. Queda de luz
 

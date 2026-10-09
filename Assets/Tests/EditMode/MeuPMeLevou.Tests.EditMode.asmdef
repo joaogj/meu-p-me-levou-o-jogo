@@ -6,7 +6,8 @@
         "UnityEditor.TestRunner",
         "MeuPMeLevou.Jaime",
         "Unity.InputSystem",
-        "Unity.InputSystem.TestFramework"
+        "Unity.InputSystem.TestFramework",
+        "MeuPMeLevou.Phone"
     ],
     "includePlatforms": [
         "Editor"
