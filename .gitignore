@@ -31,3 +31,6 @@ crashlytics-build.properties
 # Chaves e segredos nunca vão para o repositório
 .env
 *.key
+
+# Log de sessão gerado pelos hooks do Claude Code
+production/session-logs/
