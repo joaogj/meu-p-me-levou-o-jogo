@@ -27,7 +27,7 @@ Instalar pelo Package Manager: URP (`com.unity.render-pipelines.universal`), Cin
 Criar um URP Asset e um Renderer próprios e atribuí-los em Graphics e Quality. A troca para o Outro Lado usa um segundo Volume de pós-processamento. Alternativa descartada: ficar no Built-in, que não combina com o visual PS2 planejado nem com os Volumes.
 
 ### 3. Input
-Usar o Input System com um único Input Actions asset (`Jaime.inputactions`) e um mapa "Exploracao" com as ações Mover, Olhar, Correr, TrocarOmbro, Celular, Lanterna e Pausar. Alternativa descartada: o Input Manager antigo, que não oferece o remapeamento e a troca de dispositivo exigidos pela spec `controles` nas próximas fases.
+Usar o Input System com um único Input Actions asset (`Jaime.inputactions`) e um mapa "Exploration" com as ações Move, Look, Sprint, SwitchShoulder, Phone, Flashlight e Pause. Alternativa descartada: o Input Manager antigo, que não oferece o remapeamento e a troca de dispositivo exigidos pela spec `controles` nas próximas fases.
 
 ### 4. Personagem e câmera
 Jaime com `CharacterController`, movimento relativo à câmera e fôlego para correr. Câmera com Cinemachine Camera e o componente Third Person Follow, que já faz a câmera se aproximar do personagem quando há parede no caminho. Trocar de ombro anima o lado do Third Person Follow. O balanço opcional usa o ruído do Cinemachine e liga ou desliga por uma configuração. Alternativa descartada: câmera própria com raycast, que dá mais trabalho e reinventa o que o Cinemachine já resolve.
@@ -39,9 +39,9 @@ Uma única cena com dois grupos de objetos, Normal e Outro Lado. Um gatilho de �
 Interface em UI Toolkit (UXML/USS), com a tela do celular sobreposta e a lista de mensagens do chat. A bateria é um valor de 0 a 100 que cai com a lanterna ligada e a cada mensagem enviada. A lógica de bateria fica em uma classe C# simples, sem depender de cena, para ser testada no modo EditMode. Alternativa descartada: uGUI, que também funciona, mas o UI Toolkit é o caminho recomendado para interfaces novas no Unity 6.
 
 ### 7. Chat com a Mari
-O chat usa falas estáticas. Cada passo da conversa oferece de duas a três mensagens prontas para o jogador escolher, e cada escolha leva a uma resposta escrita da Mari e ao próximo passo. A conversa fica em um ScriptableObject (`ConversaMari`), com nós de fala e escolhas, e uma classe C# sem dependência de cena percorre esses nós. O "Mari está digitando…" aparece por um tempo curto antes de cada resposta, para manter o clima. Cada mensagem enviada gasta bateria.
+O chat usa falas estáticas. Cada passo da conversa oferece de duas a três mensagens prontas para o jogador escolher, e cada escolha leva a uma resposta escrita da Mari e ao próximo passo. A conversa fica em um ScriptableObject (`MariConversation`), com nós de fala e escolhas, e uma classe C# sem dependência de cena percorre esses nós. O "Mari está digitando…" aparece por um tempo curto antes de cada resposta, para manter o clima. Cada mensagem enviada gasta bateria.
 
-A interface do chat pede a próxima resposta a uma interface (`IFonteDeFalas`). No M0 a única implementação lê o ScriptableObject. Quando o chat com o Claude entrar, ele vira outra implementação, e as falas estáticas passam a ser a reserva sem conexão prevista na spec `celular`. Alternativa descartada: campo de texto livre com respostas fixas, que soaria quebrado porque a Mari ignoraria o que o jogador escreveu.
+A interface do chat pede a próxima resposta a uma interface (`IDialogueSource`). No M0 a única implementação lê o ScriptableObject. Quando o chat com o Claude entrar, ele vira outra implementação, e as falas estáticas passam a ser a reserva sem conexão prevista na spec `celular`. Alternativa descartada: campo de texto livre com respostas fixas, que soaria quebrado porque a Mari ignoraria o que o jogador escreveu.
 
 ### 8. Testes
 - Unity Test Framework: EditMode para bateria, fôlego e o percurso da conversa; PlayMode para câmera na viela e gatilho de queda de luz.

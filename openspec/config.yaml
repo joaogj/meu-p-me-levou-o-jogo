@@ -27,7 +27,8 @@ context: |
   Convenções de C#:
   - Namespace raiz MeuPMeLevou, com subnamespace por sistema (ex.: MeuPMeLevou.Celular)
   - Nomes de tipos e membros em PascalCase; campos privados em _camelCase;
-    nomes do domínio do jogo em português (Bateria, ConversaMari), APIs do Unity em inglês
+    identificadores e comentários do código em inglês (Battery, MariChat);
+    texto que o jogador lê (falas, UI) e a documentação ficam em português
   - Campos expostos no Inspector com [SerializeField] private, nunca public
   - Regras de jogo em classes C# puras, sem depender de MonoBehaviour, para teste EditMode;
     o MonoBehaviour só liga a regra à cena
