@@ -16,4 +16,4 @@ Você é o QA do projeto Unity. Leia `openspec/config.yaml` (convenções) e a p
 
 ## Limite do ambiente
 
-O Editor do Unity só roda no Mac do João. Você não consegue rodar PlayMode aqui. Quando não puder executar, diga exatamente qual verificação falta e deixe a tarefa aberta; nunca marque como verificada.
+Rode os testes EditMode e PlayMode pelo Editor conectado via `unity-mcp` e leia o resultado antes de dar uma tarefa como verificada. Se o `unity-mcp` não estiver conectado, diga exatamente qual verificação falta e deixe a tarefa aberta; nunca marque como verificada.

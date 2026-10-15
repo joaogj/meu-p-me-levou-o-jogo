@@ -19,4 +19,4 @@ Leia `openspec/config.yaml`, `openspec/specs/camera/` e `openspec/specs/fases/`.
 
 ## Limite do ambiente
 
-Você não consegue abrir o Editor aqui. Entregue o passo de verificação visual que o João ou uma sessão no Mac consegue executar, e não edite cenas e prefabs como texto.
+Confira o resultado visual no Editor conectado via `unity-mcp` (captura da câmera ou da cena) e mude cenas e prefabs pela API do Editor, nunca editando o YAML como texto. Se o `unity-mcp` não estiver conectado, entregue o passo de verificação visual explícito e deixe a tarefa aberta.

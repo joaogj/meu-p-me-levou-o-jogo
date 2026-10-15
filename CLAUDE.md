@@ -20,14 +20,20 @@ O medo e a piada são do Jaime, não da Baixada. Moradores são as pessoas mais 
 
 ## Unity e verificação
 
-- O Editor só roda no Mac do João. Aqui na nuvem não dá para abrir cena, rodar PlayMode nem compilar o projeto.
-- Por isso, tarefa que depende do Editor fica aberta, com o passo de verificação dito explicitamente para o João ou uma sessão no Mac.
+- O projeto é desenvolvido no Windows e no Mac. O Claude roda localmente, com o Editor aberto e conectado pelo `unity-mcp`.
+- Uma tarefa só é marcada como feita depois de passar pelo Editor: console sem erros, testes EditMode e PlayMode verdes e, quando for visual, uma captura da cena.
+- Para rodar os testes, o Claude chama `MeuPMeLevou.EditorTools.TestRun.Start(TestMode.EditMode)` (ou `PlayMode`) num `Unity_RunCommand` e lê `Temp/test-results.txt` quando o `RUNNING` some. O resultado do PlayMode também chega ali, apesar do recarregamento de domínio.
+- Sem o `unity-mcp` conectado, a tarefa fica aberta, com o passo de verificação dito explicitamente.
+- Cenas e prefabs mudam pela API do Editor via `unity-mcp`, nunca editando o YAML.
+- Uma máquina edita a cena por vez: `git pull` antes de abrir o Editor e `git push` antes de trocar de máquina. As duas usam a mesma versão do Editor (`ProjectSettings/ProjectVersion.txt`).
+- A configuração do `unity-mcp` no Claude Code é por máquina (o executável do relay muda entre Windows e Mac) e não vai para o repositório.
+- Pré-requisitos nas duas máquinas: Node.js e a CLI `openspec`, na mesma versão.
 - Mantenha regras de jogo em classes C# puras (testáveis em EditMode) e o MonoBehaviour só como cola com a cena.
-- Versione os `.meta` junto com os assets, nunca edite GUIDs à mão e evite editar cenas e prefabs como texto.
+- Versione os `.meta` junto com os assets e nunca edite GUIDs à mão.
 - Mudança em pacote atualiza `Packages/manifest.json` e `Packages/packages-lock.json`.
 
 ## Decisões já tomadas
 
 - Sem servidor de chat nem Claude API no M0. O chat da Mari usa falas estáticas escritas à mão, em ScriptableObject atrás da interface `IDialogueSource`. A Claude API entra depois, sempre por servidor intermediário; a chave nunca vai no cliente.
 - Câmera atrás do ombro com Cinemachine 3, Input System novo (sem o Input Manager antigo), UI Toolkit para interfaces novas.
-- Arte só de assets da Asset Store, com a licença conferida para uso comercial.
+- Arte só de assets da Asset Store, com a licença conferida para uso comercial. As ferramentas de geração de assets do Unity AI (`Unity_AssetGeneration_*`) não são usadas.

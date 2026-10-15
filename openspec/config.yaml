@@ -35,8 +35,10 @@ context: |
   - Dados de conteúdo (falas, configurações) em ScriptableObjects, não fixos no código
   - Sem Find/GetComponent em Update; referências resolvidas no Awake ou pelo Inspector
 
-  Limites do ambiente: o Editor do Unity só roda no Mac do João. Tarefas que dependem
-  do Editor precisam de um passo de verificação que ele ou uma sessão no Mac consiga executar.
+  Ambiente: o desenvolvimento acontece no Windows e no Mac, com o Claude local e o Editor
+  conectado pelo unity-mcp. Tarefas que dependem do Editor são verificadas por ele (console,
+  testes, captura). Sem o unity-mcp conectado, a tarefa fica aberta com o passo de verificação
+  explícito. Veja CLAUDE.md, seção "Unity e verificação".
 
 rules:
   proposal:

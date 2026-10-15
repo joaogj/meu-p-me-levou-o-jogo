@@ -1,0 +1,5 @@
+schema: spec-driven
+created: 2026-10-14
+goal: Deixar o repositório e as regras prontos para desenvolver no Windows e no
+  Mac com o Editor conectado pelo unity-mcp
+skip_specs: true
